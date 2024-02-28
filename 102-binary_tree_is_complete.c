@@ -27,7 +27,7 @@ int binary_comp(binary_tree_t *root, int index, int n)
 		return (0);
 	if (!root->left && !root->right)
 		return (1);
-	if (root->left && !root->right)
+	if (!root->left && root->right)
 		return (0);
 	if (root->left && !root->right)
 		return (binary_comp(root->left, index * 2 + 1, n));
