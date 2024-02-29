@@ -1,9 +1,9 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_rotate_left - rotates the binary tree anticlockwise
- * @tree: Pointer to the root node of the binary tree
- * Return: NULL or a pointer to a rotated binary tree
+ * binary_tree_rotate_left -  function that roates the binary anticlockwise
+ * @tree: Pointer to the node root
+ * Return: Pointer to node root
  */
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree)
 {
@@ -18,7 +18,8 @@ binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree)
 
 	if (alx->left)
 		alx->left->parent = parent;
-	parent->right = alx->right;
+
+	parent->right = alx->left;
 	alx->left = parent;
 	alx->parent = parent->parent;
 	parent->parent = alx;
@@ -27,5 +28,6 @@ binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree)
 		alx->parent->left = alx;
 	else if (alx->parent)
 		alx->parent->right = alx;
+
 	return (alx);
-}
+}}
