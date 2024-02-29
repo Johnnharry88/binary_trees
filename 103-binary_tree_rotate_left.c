@@ -30,4 +30,4 @@ binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree)
 		alx->parent->right = alx;
 
 	return (alx);
-}}
+}
