@@ -54,7 +54,7 @@ int b_tree_avl(const binary_tree_t *tree, int minimum, int maximum)
 	if (tree->n > maximum || tree->n < minimum)
 		return (0);
 	b = b_tree_balance(tree);
-	if (b < - 1 || b > 1)
+	if (b < -1 || b > 1)
 		return (0);
 	b_left = b_tree_avl(tree->left, minimum, tree->n - 1);
 	b_right = b_tree_avl(tree->right, tree->n + 1, maximum);
